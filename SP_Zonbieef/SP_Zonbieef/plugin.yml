@@ -1,0 +1,8 @@
+name: SP_Zonbieef
+main: SP_Zonbieef\Main
+description: ゾンビ―フ最強説プラグインン
+api: [3.0.0, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13, 3.0.0-ALPHA14, 3.0.1]
+version: 1.0
+load: POSTWORLD
+author: Noi
+

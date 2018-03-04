@@ -1,0 +1,22 @@
+name: BanCmd
+main: BanCmd\Main
+version: 1.0
+api: [3.0.0, 3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13]
+load: POSTWORLD
+author: Noi
+description: コマンドの使用を禁止します
+
+commands:
+ bancmd:
+  description: コマンドをbanするコマンド
+  usage: "§6/bancmd [command]"
+  permission: "cmd.command"
+ unbancmd:
+  description: コマンドをunbanするコマンド
+  usage: "§6/unbancmd [command]"
+  permission: "cmd.command"
+
+permissions:
+ cmd.command:
+  default: op
+  

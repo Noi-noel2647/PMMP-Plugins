@@ -1,0 +1,7 @@
+name: NAJ
+main: NAJ\NAJ
+version: 1.0
+api: [1.13.0, 3.0.0, 3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13]
+load: POSTWORLD
+author: Noi
+description: 指定されたワールドでの、自動ジャンプはできなくなります。

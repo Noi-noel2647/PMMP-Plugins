@@ -1,0 +1,7 @@
+name: WhiteBanMS
+main: WhiteBanMS\Main
+version: 2.0
+api: [2.0.0, 3.0.0, 3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13]
+load: POSTWORLD
+author: Noi
+description: ホワリス時・Ban時 に表示されるメッセージを変更するプラグイン

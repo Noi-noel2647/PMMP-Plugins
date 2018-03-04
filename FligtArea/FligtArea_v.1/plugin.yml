@@ -1,0 +1,7 @@
+name: FligtArea
+main: FligtArea\Main
+version: 1.0
+api: [3.0.0, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
+load: POSTWORLD
+author: Noi
+description: configで設定したエリアでの自由空中浮遊(FligtArea)
