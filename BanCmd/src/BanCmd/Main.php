@@ -56,6 +56,7 @@ class Main extends PluginBase implements Listener{
 					}
 				break;
 		}
+		return true;
 	}
 
 	public function onPlayerCommandPreprocess(PlayerCommandPreprocessEvent $event){
