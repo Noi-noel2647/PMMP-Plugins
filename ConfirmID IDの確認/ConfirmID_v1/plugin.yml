@@ -1,0 +1,10 @@
+name: ConfirmID
+main: ConfirmID\ConfirmID
+version: 1.0
+api: [3.0.0, 3.0.0-ALPHA12, 3.0.0-ALPHA13, 3.0.0-ALPHA14, 3.0.1]
+load: POSTWORLD
+author: Noi
+commands:
+ cid:
+   description: §bアイテムIDを調べます
+   usage: " /cid"
