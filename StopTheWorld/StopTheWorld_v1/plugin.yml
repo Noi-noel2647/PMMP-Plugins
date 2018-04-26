@@ -1,0 +1,16 @@
+name: StopTheWorld
+main: StopTheWorld\Main
+version: 1.0
+api: [3.0.0, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13, 3.0.0-ALPHA14, 3.0.1]
+load: POSTWORLD
+author: Noi
+description: プラグインの説明
+
+commands:
+ wt:
+  description: 全ワールドの時間の操作
+  usage: "/wt [start | stop]"
+  permission: "plugin.command"
+permissions:
+  plugin.command:
+    default: op
