@@ -1,0 +1,12 @@
+name: KillTarget
+main: KillTarget\Main
+version: 2.0
+api: [3.0.0, 3.0.1, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13, 3.0.0-ALPHA14]
+load: POSTWORLD
+author: Noi
+description: ターゲットの暗殺
+
+commands:
+  target:
+    description: "現在のターゲットを確認できます。"
+    usage: "/target"
