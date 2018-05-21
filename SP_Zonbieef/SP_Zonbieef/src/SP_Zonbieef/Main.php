@@ -4,6 +4,7 @@ namespace SP_Zonbieef;
 use pocketmine\event\player\PlayerItemConsumeEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\entity\Effect;
+use pocketmine\entity\EffectInstance;
 use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener{
@@ -16,13 +17,13 @@ class Main extends PluginBase implements Listener{
 
 		$player = $event->getPlayer();
 		$name = $player->getName();
-		$item = $player->getItemInHand()->getId();
+		$item = $player->getInventory()->getItemInHand()->getId();
 
 		if($item === 260){
 
 			for($num = 1; $num < 24; $num++){
 
-				$effect = Effect::getEffect($num);//effectID
+				$effect = new EffectInstance(Effect::getEffect($num));//effectID
 				$effect->setDuration(120*20);//効果の時間*20
 				$effect->setAmplifier(2);//効果の強さ
 				$effect->setVisible(true);//パーティクルを表示するかどうか
