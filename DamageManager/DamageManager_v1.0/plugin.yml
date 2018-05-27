@@ -1,0 +1,7 @@
+name: DamageManager
+main: DamageManager\Main
+version: 1.0
+api: [3.0.0, 3.0.0-ALPHA11, 3.0.0-ALPHA12, 3.0.0-ALPHA13, 3.0.0-ALPHA14, 3.0.1]
+load: POSTWORLD
+author: Noi
+description: DamageManager
