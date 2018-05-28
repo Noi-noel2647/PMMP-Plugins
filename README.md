@@ -1,6 +1,7 @@
-# [P]Plugins
+# [Pocketmine-MP]Plugins
 # 【これらのプラグインは製作中or製作終了したものです】
 <b> 二次配布、製作者の偽り等という行為は禁じます </b>
+issuesやPull requests等を頂ければ、サポートします
 
 ## プラグインの紹介
 ### ・AutoStop
