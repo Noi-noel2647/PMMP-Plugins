@@ -18,7 +18,9 @@ class Main extends PluginBase implements Listener {
 
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$plugin = "DamageManager";
-		$this->getLogger()->info("§a".$plugin."§eis loaded. §f何かあれば§bTwitter §e@Noi_noel2647 §fまで");
+		$this->getLogger()->notice("§a".$plugin." §3is loaded. §7(Dev. Noi)");
+		$this->getLogger()->notice("§bTwitter §e@Noi_noel2647");
+		$this->getLogger()->notice("§9GitHub §ehttps://github.com/shoki-3738");
 
 
 		if(!file_exists($this->getDataFolder())){
@@ -58,132 +60,62 @@ class Main extends PluginBase implements Listener {
 	public function onDamage(EntityDamageEvent $event){
 
 		$entity = $event->getEntity();
+		$cause = $this->getCauseString($event->getCause());
 
 		if($entity instanceof Player){
 
 			if($this->cause["ALL"] === true){
 				$event->setCancelled();
 
-			}else{
+			}elseif($this->cause[$cause] === true){
+				$event->setCancelled();
 
-				switch($event->getCause()){
-
-					case $event::CAUSE_CONTACT:
-						if($this->cause["CAUSE_CONTACT"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_ENTITY_ATTACK:
-						if($this->cause["CAUSE_ENTITY_ATTACK"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_PROJECTILE:
-						if($this->cause["CAUSE_PROJECTILE"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_SUFFOCATION:
-						if($this->cause["CAUSE_SUFFOCATION"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_FALL:
-						if($this->cause["CAUSE_FALL"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_FIRE:
-						if($this->cause["CAUSE_FIRE"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_FIRE_TICK:
-						if($this->cause["CAUSE_FIRE_TICK"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_LAVA:
-						if($this->cause["CAUSE_LAVA"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_DROWNING:
-						if($this->cause["CAUSE_DROWNING"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_BLOCK_EXPLOSION:
-						if($this->cause["CAUSE_BLOCK_EXPLOSION"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_ENTITY_EXPLOSION:
-						if($this->cause["CAUSE_ENTITY_EXPLOSION"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_VOID:
-						if($this->cause["CAUSE_VOID"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_SUICIDE:
-						if($this->cause["CAUSE_SUICIDE"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_MAGIC:
-						if($this->cause["CAUSE_MAGIC"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_CUSTOM:
-						if($this->cause["CAUSE_CUSTOM"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-					case $event::CAUSE_STARVATION:
-						if($this->cause["CAUSE_STARVATION"] === true){
-							$event->setCancelled();
-
-						}
-						break;
-
-				}
 			}
 		}
 	}
+
+
+	public function getCauseString($cause) {
+
+		switch($cause){
+
+			case 0:
+				return "CAUSE_CONTACT";
+			case 1:
+				return "CAUSE_ENTITY_ATTACK";
+			case 2:
+				return "CAUSE_PROJECTILE";
+			case 3:
+				return "CAUSE_SUFFOCATION";
+			case 4:
+				return "CAUSE_FALL";
+			case 5:
+				return "CAUSE_FIRE";
+			case 6:
+				return "CAUSE_FIRE_TICK";
+			case 7:
+				return "CAUSE_LAVA";
+			case 8:
+				return "CAUSE_DROWNING";
+			case 9:
+				return "CAUSE_BLOCK_EXPLOSION";
+			case 10:
+				return "CAUSE_ENTITY_EXPLOSION";
+			case 11:
+				return "CAUSE_VOID";
+			case 12:
+				return "CAUSE_SUICIDE";
+			case 13:
+				return "CAUSE_MAGIC";
+			case 14:
+				return "CAUSE_CUSTOM";
+			case 15:
+				return "CAUSE_STARVATION";
+
+		}
+	}
+
+
 
 
 
