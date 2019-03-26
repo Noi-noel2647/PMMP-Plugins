@@ -2,14 +2,14 @@
 
 namespace Noi;
 
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 use pocketmine\plugin\PluginBase;
+use pocketmine\Server;
 
-class ShutdownTask extends PluginTask{
+class ShutdownTask extends Task{
 
 	public function __construct(PluginBase $owner, $message){
 
-		parent::__construct($owner);
 		$this->message = $message;
 
 	}
@@ -17,18 +17,18 @@ class ShutdownTask extends PluginTask{
 
 	public function onRun(int $tick){
 
-		$players = $this->owner->getServer()->getInstance()->getOnlinePlayers();
+		$players = Server::getInstance()->getOnlinePlayers();
 
 		if($players == null){
 
-			$this->owner->getServer()->shutdown();
+			Server::getInstance()->shutdown();
 
 		}else{
 
 			foreach($players as $player){
 
 				$player->kick($this->message, false);
-				$this->owner->getServer()->shutdown();
+				Server::getInstance()->shutdown();
 
 			}
 		}

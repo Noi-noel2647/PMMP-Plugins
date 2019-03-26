@@ -3,7 +3,7 @@
 namespace Noi;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\scheduler\PluginTask;
+use pocketmine\scheduler\Task;
 use pocketmine\utils\Config;
 
 class AutoStop extends PluginBase{
@@ -30,8 +30,8 @@ class AutoStop extends PluginBase{
 		$task = new ShutdownTask($this, $ms);
 		$task2 = new ScheduleTask($this, $time);
 
-		$this->getServer()->getScheduler()->scheduleDelayedTask($task, $time);
-		$this->getServer()->getScheduler()->scheduleRepeatingTask($task2, 1200);
+		$this->getScheduler()->scheduleDelayedTask($task, $time);
+		$this->getScheduler()->scheduleRepeatingTask($task2, 1200);
 
 	}
 
