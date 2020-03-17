@@ -1,0 +1,7 @@
+name: IBNameAPI
+main: IBNameAPI\Main
+version: 0.16(meta)
+api: [3.0.0]
+load: POSTWORLD
+author: Noi
+description: アイテム・ブロックの日本語化API
