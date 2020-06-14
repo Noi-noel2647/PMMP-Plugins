@@ -1,0 +1,7 @@
+name: FloatingInfo
+main: FloatingInfo\Main
+version: 1.0.0
+api: [3.0.0, 4.0.0]
+load: POSTWORLD
+author: Noi
+description: 浮き文字でサーバー情報がみれます
