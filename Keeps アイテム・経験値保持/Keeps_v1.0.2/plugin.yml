@@ -1,0 +1,10 @@
+name: Keeps
+main: Keeps\Main
+version: 1.0.2
+load: POSTWORLD
+api: 
+- 3.0.0
+- 4.0.0
+author: Noi
+description: Inventory/Experienceをkeepします
+
