@@ -5,11 +5,11 @@
 
 ## プラグインの紹介
 ### ・AutoStop
-自称　日本語化再起動プラグイン <br>
+自称　日本語化再起動補助プラグイン <br>
 Loop.cmdもお使いください
 
 ### ・BanCmd
-このプラグインは、Configで設定された特定のCommandの使用を禁止します。(op, consoleは含まれない)
+/bancmdコマンド、Configで設定された特定のCommandの使用を禁止します。(op, consoleは含まれない)
 
 ### ・FlightArea
 限られた範囲のみプレイヤーが空を飛べます。
